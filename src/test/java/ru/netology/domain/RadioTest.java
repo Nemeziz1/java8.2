@@ -40,7 +40,7 @@ class RadioTest {
         int expectedCurrentRadiostation = 0;
         radio.setCurrentRadiostation(currentRadiostation);
         radio.nextStation();
-        assertEquals(expectedCurrentRadiostation, radio.getFirstRadiostation());
+        assertEquals(expectedCurrentRadiostation, radio.getCurrentRadiostation());
     }
 
     @Test
@@ -52,7 +52,7 @@ class RadioTest {
         int expectedCurrentRadiostation = 9;
         radio.setCurrentRadiostation(currentRadiostation);
         radio.prevStation();
-        assertEquals(expectedCurrentRadiostation, radio.getLastRadiostation());
+        assertEquals(expectedCurrentRadiostation, radio.getCurrentRadiostation());
     }
 
     @Test

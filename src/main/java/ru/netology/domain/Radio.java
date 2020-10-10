@@ -57,14 +57,18 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentRadiostation >= lastRadiostation)
+        if (currentRadiostation >= lastRadiostation) {
             this.currentRadiostation = firstRadiostation;
+            return;
+        }
         this.currentRadiostation = currentRadiostation + 1;
     }
 
     public void prevStation() {
-        if (currentRadiostation <= firstRadiostation)
+        if (currentRadiostation <= firstRadiostation) {
             this.currentRadiostation = lastRadiostation;
+            return;
+        }
         this.currentRadiostation = currentRadiostation - 1;
     }
 
