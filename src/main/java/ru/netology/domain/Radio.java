@@ -1,5 +1,13 @@
 package ru.netology.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
 public class Radio {
     private int numberOfStations = 15;
     private int currentRadiostation = 10;
@@ -9,8 +17,6 @@ public class Radio {
     private int maxVolume = 100;
     private int minVolume = 0;
 
-    public Radio() {
-    }
 
     public Radio(int numberOfStations, int currentRadiostation, int firstRadiostation, int lastRadiostation) {
         this.numberOfStations = numberOfStations;
@@ -23,62 +29,6 @@ public class Radio {
         this.currentVolume = currentVolume;
         this.maxVolume = maxVolume;
         this.minVolume = minVolume;
-    }
-
-    public int getNumberOfStations() {
-        return numberOfStations;
-    }
-
-    public void setNumberOfStations(int numberOfStations) {
-        this.numberOfStations = numberOfStations;
-    }
-
-    public int getFirstRadiostation() {
-        return firstRadiostation;
-    }
-
-    public int getCurrentRadiostation() {
-        return currentRadiostation;
-    }
-
-    public void setFirstRadiostation(int firstRadiostation) {
-        this.firstRadiostation = firstRadiostation;
-    }
-
-    public int getLastRadiostation() {
-        return lastRadiostation;
-    }
-
-    public void setLastRadiostation(int lastRadiostation) {
-        this.lastRadiostation = lastRadiostation;
-    }
-
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-
-    public void setCurrentVolume(int currentVolume) {
-        this.currentVolume = currentVolume;
-    }
-
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public void setMaxVolume(int maxVolume) {
-        this.maxVolume = maxVolume;
-    }
-
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    public void setMinVolume(int minVolume) {
-        this.minVolume = minVolume;
-    }
-
-    public void setCurrentRadiostation(int currentRadiostation) {
-        this.currentRadiostation = currentRadiostation;
     }
 
     public void nextStation() {
